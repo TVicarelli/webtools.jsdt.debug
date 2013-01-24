@@ -24,11 +24,11 @@ import org.eclipse.wst.jsdt.debug.transport.TransportService;
 
 /**
  * Default launching connector for CrossFire
- * 
+ *
  * @since 1.0
  */
 public class CrossfireListeningConnector implements ListeningConnector {
-	
+
 	/**
 	 * The id of the connector
 	 */
@@ -84,7 +84,12 @@ public class CrossfireListeningConnector implements ListeningConnector {
 		int timeout = Integer.parseInt(timeoutstr);
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(host).append(':').append(Integer.parseInt(port));
-		Connection c = service.accept(service.startListening(buffer.toString()), timeout, timeout);
+		Connection c;
+		try {
+			c = service.accept(service.startListening(buffer.toString()), timeout, timeout);
+		} catch (Exception e) {
+			throw new IOException(e); //TODO: da fixare
+		}
 		DebugSession session = new DebugSession(c);
 		return new CFVirtualMachine(session);
 	}

@@ -27,13 +27,13 @@ import org.eclipse.wst.jsdt.debug.transport.TransportService;
 
 /**
  * Default attaching connector
- * 
+ *
  * @since 1.0
  */
 public class ChromeAttachingConnector implements AttachingConnector {
 
 	public static final String ID = "org.eclipse.wst.jsdt.debug.chrome.connector.attach"; //$NON-NLS-1$
-	
+
 	/**
 	 * Constructor
 	 */
@@ -88,14 +88,14 @@ public class ChromeAttachingConnector implements AttachingConnector {
 		DebugSession session = new DebugSession(c);
 		return new VMImpl(session);
 	}
-	
+
 	/**
 	 * Launches the browser and connects to it. This method will poll for the browser to be launched
-	 * but only for a fixed timeout. 
+	 * but only for a fixed timeout.
 	 * @param arguments
 	 * @return the created connection or <code>null</code> if the attempt to connect times out, the browser process
-	 * terminates before we can connect  
-	 * @throws IOException 
+	 * terminates before we can connect
+	 * @throws IOException
 	 */
 	Connection launchForBrowser(Map arguments) throws IOException {
 		TransportService service = new ChromeTransportService();
@@ -117,7 +117,7 @@ public class ChromeAttachingConnector implements AttachingConnector {
 		long timer = System.currentTimeMillis() + 60000;
 		while(proc != null && System.currentTimeMillis() < timer && c == null) {
 			try {
-				c = service.attach(buffer.toString(), timeout, timeout);
+				c = service.attach(buffer.toString(), "","",timeout, timeout); //$NON-NLS-1$ //$NON-NLS-2$
 			}
 			catch(IOException ioe) {
 				//ignore while pinging to connect
@@ -133,9 +133,9 @@ public class ChromeAttachingConnector implements AttachingConnector {
 		}
 		return c;
 	}
-	
+
 	/**
-	 * Tries to connect to the given 
+	 * Tries to connect to the given
 	 * @param arguments
 	 * @return the {@link Connection} or throws an exception
 	 * @throws IOException
@@ -148,6 +148,6 @@ public class ChromeAttachingConnector implements AttachingConnector {
 		int timeout = Integer.parseInt(timeoutstr);
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(host).append(':').append(Integer.parseInt(port));
-		return service.attach(buffer.toString(), timeout, timeout);
+		return service.attach(buffer.toString(), "","",timeout, timeout);  //$NON-NLS-1$//$NON-NLS-2$
 	}
 }

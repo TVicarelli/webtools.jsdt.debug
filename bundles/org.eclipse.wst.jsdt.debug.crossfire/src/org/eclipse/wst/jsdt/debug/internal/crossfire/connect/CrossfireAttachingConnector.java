@@ -27,7 +27,7 @@ import org.eclipse.wst.jsdt.debug.transport.TransportService;
 
 /**
  * Attaching connector for Crossfire
- * 
+ *
  * @since 1.0
  */
 public class CrossfireAttachingConnector implements AttachingConnector {
@@ -79,7 +79,7 @@ public class CrossfireAttachingConnector implements AttachingConnector {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.wst.jsdt.debug.core.jsdi.connect.Connector#id()
 	 */
 	public String id() {
@@ -112,7 +112,7 @@ public class CrossfireAttachingConnector implements AttachingConnector {
 	/**
 	 * Launches the browser and connects to it. This method will poll for the
 	 * browser to be launched but only for a fixed timeout.
-	 * 
+	 *
 	 * @param arguments
 	 * @return the created connection or <code>null</code> if the attempt to
 	 *         connect times out, the browser process terminates before we can
@@ -133,7 +133,7 @@ public class CrossfireAttachingConnector implements AttachingConnector {
 		Connection c = null;
 		while (p != null && System.currentTimeMillis() < timer && c == null) {
 			try {
-				c = service.attach(buffer.toString(), timeout,timeout);
+				c = service.attach(buffer.toString(), "","",timeout,timeout); //$NON-NLS-1$ //$NON-NLS-2$
 			} catch (IOException ioe) {
 				// ignore while pinging to connect
 				try {
@@ -151,7 +151,7 @@ public class CrossfireAttachingConnector implements AttachingConnector {
 
 	/**
 	 * Tries to connect to the given
-	 * 
+	 *
 	 * @param arguments
 	 * @return the {@link Connection} or throws an exception
 	 * @throws IOException
@@ -164,9 +164,9 @@ public class CrossfireAttachingConnector implements AttachingConnector {
 		int timeout = Integer.parseInt(timeoutstr);
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(host).append(':').append(Integer.parseInt(port));
-		return service.attach(buffer.toString(), timeout, timeout);
+		return service.attach(buffer.toString(), "","",timeout, timeout);  //$NON-NLS-1$//$NON-NLS-2$
 	}
-	
+
 	String[] getToolArgs(Map arguments) {
 		ArrayList tools = new ArrayList();
 		String value = (String) arguments.get(ConsoleArgument.CONSOLE);

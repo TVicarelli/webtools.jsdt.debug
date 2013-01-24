@@ -3,7 +3,7 @@
  * program and the accompanying materials are made available under the terms of
  * the Eclipse Public License v1.0 which accompanies this distribution, and is
  * available at http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: IBM Corporation - initial API and implementation
  *******************************************************************************/
 package org.eclipse.wst.jsdt.debug.internal.crossfire.transport;
@@ -23,7 +23,7 @@ import org.eclipse.wst.jsdt.debug.transport.socket.SocketTransportService;
 
 /**
  * Implementation of a transport service that using a {@link Socket} for communication
- * 
+ *
  * @since 1.0
  */
 public class CFTransportService extends SocketTransportService {
@@ -34,16 +34,16 @@ public class CFTransportService extends SocketTransportService {
 	 * Map of {@link ListenerKey} to {@link ServerSocket}s
 	 */
 	Map listeners = new HashMap();
-	
+
 	String[] tools = null;
-	
+
 	/**
 	 * Constructor
 	 */
 	public CFTransportService(String[] tools) {
 		this.tools = tools;
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.wst.jsdt.debug.transport.socket.SocketTransportService#getConnection(java.net.Socket)
 	 */
@@ -66,7 +66,7 @@ public class CFTransportService extends SocketTransportService {
 		}
 		throw new IOException("failure establishing connection"); //$NON-NLS-1$
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.wst.jsdt.debug.transport.socket.SocketTransportService#handleAttach(org.eclipse.wst.jsdt.debug.transport.Connection)
 	 */
@@ -81,5 +81,18 @@ public class CFTransportService extends SocketTransportService {
 			return;
 		}
 		throw new IOException("failure establishing connection"); //$NON-NLS-1$
+	}
+
+	protected ServerSocket createServerSocket(int port) throws Exception {
+		return new ServerSocket(port);
+	}
+
+	protected Socket createSocket(String host, int port) throws Exception {
+		return new Socket(host, port);
+	}
+
+	public void handleAttach(Connection connection, String username,
+			String password) throws Exception {
+		handleAttach(connection);
 	}
 }
