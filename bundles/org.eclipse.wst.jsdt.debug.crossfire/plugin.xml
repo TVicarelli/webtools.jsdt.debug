@@ -2,16 +2,16 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.internal.crossfire.connect.CrossfireListeningConnector"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.crossfire.connect.CrossfireListeningConnector"
             id="crossfire.remote.listen.connector">
       </connector>
    </extension>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.internal.crossfire.connect.CrossfireAttachingConnector"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.crossfire.connect.CrossfireAttachingConnector"
             id="crossfire.remote.attach.connector">
       </connector>
    </extension>

@@ -5,7 +5,7 @@
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
     http://www.eclipse.org/legal/epl-v10.html
-   
+
     Contributors:
         IBM Corporation - initial API and implementation
  -->
@@ -17,18 +17,18 @@
    <extension
          point="org.eclipse.debug.core.launchConfigurationTypes">
       <launchConfigurationType
-            id="org.eclipse.wst.jsdt.debug.core.launchConfigurationType"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchConfigurationType"
             modes="run,debug"
             name="%launchConfigurationType.name"
             public="true">
       </launchConfigurationType>
    </extension>
    <extension
-         id="org.eclipse.wst.jsdt.debug.core.line.breakpoint.marker"
+         id="com.fhoster.org.eclipse.wst.jsdt.debug.core.line.breakpoint.marker"
          name="%linebreakpoint.name"
          point="org.eclipse.core.resources.markers">
       <super
-            type="org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
       </super>
       <super
             type="org.eclipse.debug.core.lineBreakpointMarker">
@@ -38,11 +38,11 @@
       </persistent>
    </extension>
    <extension
-         id="org.eclipse.wst.jsdt.debug.core.function.breakpoint.marker"
+         id="com.fhoster.org.eclipse.wst.jsdt.debug.core.function.breakpoint.marker"
          name="%methodbreakpoint.name"
          point="org.eclipse.core.resources.markers">
       <super
-            type="org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
       </super>
       <super
             type="org.eclipse.jdt.debug.javaMethodBreakpointMarker">
@@ -52,11 +52,11 @@
       </persistent>
    </extension>
    <extension
-         id="org.eclipse.wst.jsdt.debug.core.scriptload.breakpoint.marker"
+         id="com.fhoster.org.eclipse.wst.jsdt.debug.core.scriptload.breakpoint.marker"
          name="%scriptloadbreakpoint.name"
          point="org.eclipse.core.resources.markers">
       <super
-            type="org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
       </super>
       <super
             type="org.eclipse.jdt.debug.javaClassPrepareBreakpointMarker">
@@ -66,7 +66,7 @@
       </persistent>
    </extension>
    <extension
-         id="org.eclipse.wst.jsdt.debug.core.breakpoint.marker"
+         id="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoint.marker"
          name="%breakpoint.name"
          point="org.eclipse.core.resources.markers">
       <super
@@ -74,11 +74,11 @@
       </super>
    </extension>
    <extension
-         id="org.eclipse.wst.jsdt.debug.core.exception.breakpoint.marker"
+         id="com.fhoster.org.eclipse.wst.jsdt.debug.core.exception.breakpoint.marker"
          name="%exceptionbreakpoint.name"
          point="org.eclipse.core.resources.markers">
       <super
-            type="org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoint.marker">
       </super>
       <super
             type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
@@ -90,76 +90,76 @@
    <extension
          point="org.eclipse.debug.core.breakpoints">
       <breakpoint
-            class="org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptLineBreakpoint"
-            id="org.eclipse.wst.jsdt.debug.core.linebreakpoint"
-            markerType="org.eclipse.wst.jsdt.debug.core.line.breakpoint.marker"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptLineBreakpoint"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.linebreakpoint"
+            markerType="com.fhoster.org.eclipse.wst.jsdt.debug.core.line.breakpoint.marker"
             name="%linebreakpoint.name">
       </breakpoint>
       <breakpoint
-            class="org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptFunctionBreakpoint"
-            id="org.eclipse.wst.jsdt.debug.core.functionbreakpoint"
-            markerType="org.eclipse.wst.jsdt.debug.core.function.breakpoint.marker"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptFunctionBreakpoint"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.functionbreakpoint"
+            markerType="com.fhoster.org.eclipse.wst.jsdt.debug.core.function.breakpoint.marker"
             name="%methodbreakpoint.name">
       </breakpoint>
       <breakpoint
-            class="org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptLoadBreakpoint"
-            id="org.eclipse.wst.jsdt.debug.core.scriptloadbreakpoint"
-            markerType="org.eclipse.wst.jsdt.debug.core.scriptload.breakpoint.marker"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptLoadBreakpoint"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.scriptloadbreakpoint"
+            markerType="com.fhoster.org.eclipse.wst.jsdt.debug.core.scriptload.breakpoint.marker"
             name="%scriptloadbreakpoint.name">
       </breakpoint>
       <breakpoint
-            class="org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptExceptionBreakpoint"
-            id="org.eclipse.wst.jsdt.debug.core.exceptionbreakpoint"
-            markerType="org.eclipse.wst.jsdt.debug.core.exception.breakpoint.marker"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.breakpoints.JavaScriptExceptionBreakpoint"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.exceptionbreakpoint"
+            markerType="com.fhoster.org.eclipse.wst.jsdt.debug.core.exception.breakpoint.marker"
             name="%exceptionbreakpoint.name">
       </breakpoint>
    </extension>
    <extension
          point="org.eclipse.debug.core.launchDelegates">
       <launchDelegate
-            delegate="org.eclipse.wst.jsdt.debug.internal.core.launching.RemoteJavaScriptLaunchDelegate"
-            delegateDescription="Remote JavaScript"
-            id="org.eclipse.wst.jsdt.debug.core.remoteLaunchDelegate"
+            delegate="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.launching.RemoteJavaScriptLaunchDelegate"
+            delegateDescription="Fhoster JavaScript"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.remoteLaunchDelegate"
             modes="debug"
             name="%remoteJsLaunchDelegate.name"
-            sourceLocatorId="org.eclipse.wst.jsdt.debug.core.sourceLocator"
-            sourcePathComputerId="org.eclipse.wst.jsdt.debug.core.source.path.computer"
-            type="org.eclipse.wst.jsdt.debug.core.launchConfigurationType">
+            sourceLocatorId="com.fhoster.org.eclipse.wst.jsdt.debug.core.sourceLocator"
+            sourcePathComputerId="com.fhoster.org.eclipse.wst.jsdt.debug.core.source.path.computer"
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchConfigurationType">
       </launchDelegate>
    </extension>
    <extension
          point="org.eclipse.debug.core.sourceLocators">
       <sourceLocator
-            class="org.eclipse.wst.jsdt.debug.internal.core.launching.JavaScriptSourceDirector"
-            id="org.eclipse.wst.jsdt.debug.core.sourceLocator"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.launching.JavaScriptSourceDirector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.sourceLocator"
             name="%sourceLocator.name">
       </sourceLocator>
    </extension>
    <extension
          point="org.eclipse.debug.core.watchExpressionDelegates">
       <watchExpressionDelegate
-            debugModel="org.eclipse.wst.jsdt.debug.model"
-            delegateClass="org.eclipse.wst.jsdt.debug.internal.core.JavaScriptWatchExpressionDelegate">
+            debugModel="com.fhoster.org.eclipse.wst.jsdt.debug.model"
+            delegateClass="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.JavaScriptWatchExpressionDelegate">
       </watchExpressionDelegate>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.wst.jsdt.debug.internal.core.JavaScriptDebugPreferenceInitializer">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.JavaScriptDebugPreferenceInitializer">
       </initializer>
    </extension>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.breakpointParticipants">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpointParticipants">
       <participant
-            class="org.eclipse.wst.jsdt.debug.internal.core.breakpoints.DefaultJavaScriptBreakpointParticipant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.breakpoints.DefaultJavaScriptBreakpointParticipant"
             kind="*">
       </participant>
    </extension>
    <extension
          point="org.eclipse.debug.core.sourcePathComputers">
       <sourcePathComputer
-            class="org.eclipse.wst.jsdt.debug.internal.core.launching.JavaScriptSourcePathComputerDelegate"
-            id="org.eclipse.wst.jsdt.debug.core.source.path.computer">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.core.launching.JavaScriptSourcePathComputerDelegate"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.core.source.path.computer">
       </sourcePathComputer>
    </extension>
 

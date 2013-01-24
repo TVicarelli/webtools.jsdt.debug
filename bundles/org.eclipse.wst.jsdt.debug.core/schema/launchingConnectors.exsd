@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.wst.jsdt.debug.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="com.fhoster.org.eclipse.wst.jsdt.debug.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.wst.jsdt.debug.core" id="launchingConnectors" name="Launching Connectors"/>
+         <meta.schema plugin="com.fhoster.org.eclipse.wst.jsdt.debug.core" id="launchingConnectors" name="Launching Connectors"/>
       </appinfo>
       <documentation>
          This extension point allows contributors to specify their own definition of a connector
@@ -55,7 +55,7 @@
                   The connector class that implements org.eclipse.e4.languages.javascript.jsdi.connect.Connector
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.wst.jsdt.debug.core.jsdi.connect.Connector"/>
+                  <meta.attribute kind="java" basedOn=":com.fhoster.org.eclipse.wst.jsdt.debug.core.jsdi.connect.Connector"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -86,9 +86,9 @@
          The following example is the real life definition of the Mozilla Rhino attaching connector.
 &lt;pre&gt;
  &lt;extension
-         point=&quot;org.eclipse.wst.jsdt.debug.core.connectors&quot;&gt;
+         point=&quot;com.fhoster.org.eclipse.wst.jsdt.debug.core.connectors&quot;&gt;
       &lt;connector
-            class=&quot;org.eclipse.wst.jsdt.debug.rhino.connect.RhinoAttachingConnector&quot;
+            class=&quot;com.fhoster.org.eclipse.wst.jsdt.debug.rhino.connect.RhinoAttachingConnector&quot;
             id=&quot;rhino.attaching.connector&quot;&gt;
       &lt;/connector&gt;
    &lt;/extension&gt;
@@ -101,7 +101,7 @@
          <meta.section type="apiinfo"/>
       </appinfo>
       <documentation>
-         The class attribute is required and must implement &lt;code&gt;org.eclipse.wst.jsdt.debug.core.jsdi.connect.Connector&lt;/code&gt;
+         The class attribute is required and must implement &lt;code&gt;com.fhoster.org.eclipse.wst.jsdt.debug.core.jsdi.connect.Connector&lt;/code&gt;
       </documentation>
    </annotation>
 

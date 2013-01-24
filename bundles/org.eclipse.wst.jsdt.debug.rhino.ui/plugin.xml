@@ -4,57 +4,57 @@
    <extension
          point="org.eclipse.debug.core.launchConfigurationTypes">
       <launchConfigurationType
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type"
             modes="debug"
             name="%launchConfigurationType.name"
             public="true"
-            sourceLocatorId="org.eclipse.wst.jsdt.debug.rhino.ui.source.locator">
+            sourceLocatorId="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.source.locator">
       </launchConfigurationType>
    </extension>
    <extension
          point="org.eclipse.debug.core.launchDelegates">
       <launchDelegate
-            delegate="org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoLocalLaunchDelegate"
+            delegate="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoLocalLaunchDelegate"
             delegateDescription="%launchDelegate.description"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.local.launch.delegate"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.local.launch.delegate"
             modes="debug"
             name="%launchDelegate.name"
-            sourceLocatorId="org.eclipse.wst.jsdt.debug.rhino.ui.source.locator"
-            sourcePathComputerId="org.eclipse.wst.jsdt.debug.rhino.ui.source.path.computer"
-            type="org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
+            sourceLocatorId="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.source.locator"
+            sourcePathComputerId="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.source.path.computer"
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
       </launchDelegate>
    </extension>
    <extension
          point="org.eclipse.debug.core.sourceLocators">
       <sourceLocator
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.source.RhinoSourceDirector"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.source.locator"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.source.RhinoSourceDirector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.source.locator"
             name="%sourceLocator.name">
       </sourceLocator>
    </extension>
    <extension
          point="org.eclipse.debug.ui.launchConfigurationTypeImages">
       <launchConfigurationTypeImage
-            configTypeID="org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type"
+            configTypeID="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type"
             icon="$nl$/icons/elcl16/rhino.gif"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.launch.configuration.image">
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.configuration.image">
       </launchConfigurationTypeImage>
    </extension>
    <extension
          point="org.eclipse.debug.ui.launchConfigurationTabGroups">
       <launchConfigurationTabGroup
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoTabGroup"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoTabGroup"
             description="%launchConfigurationTabGroup.description"
             helpContextId="rhino_tab_group_context"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.launchConfigurationTabGroup1"
-            type="org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launchConfigurationTabGroup1"
+            type="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
       </launchConfigurationTabGroup>
    </extension>
    <extension
          point="org.eclipse.ltk.core.refactoring.renameParticipants">
       <renameParticipant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ScriptRenameParticipant"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.script.rename.participant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ScriptRenameParticipant"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.script.rename.participant"
             name="%scriptRenameParticipant.name">
          <enablement>
             <with
@@ -66,8 +66,8 @@
          </enablement>
       </renameParticipant>
       <renameParticipant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ProjectRenameParticipant"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.project.rename.participant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ProjectRenameParticipant"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.project.rename.participant"
             name="%projectRenameParticipant.name">
          <enablement>
             <with
@@ -79,8 +79,8 @@
          </enablement>
       </renameParticipant>
       <renameParticipant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.FolderRenameParticipant"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.folder.rename.participant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.FolderRenameParticipant"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.folder.rename.participant"
             name="%folderRenameParticipant.name">
          <enablement>
             <with
@@ -95,8 +95,8 @@
    <extension
          point="org.eclipse.ltk.core.refactoring.moveParticipants">
       <moveParticipant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ScriptMoveParticipant"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.script.move.participant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.ScriptMoveParticipant"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.script.move.participant"
             name="%scriptMoveParticipant.name">
          <enablement>
             <with
@@ -108,8 +108,8 @@
          </enablement>
       </moveParticipant>
       <moveParticipant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.FolderMoveParticipant"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.folder.move.participant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.refactoring.FolderMoveParticipant"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.folder.move.participant"
             name="%folderMoveParticipant.name">
          <enablement>
             <with
@@ -123,11 +123,11 @@
    <extension
          point="org.eclipse.debug.ui.launchShortcuts">
       <shortcut
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoLaunchShortcut"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.launching.RhinoLaunchShortcut"
             description="%shortcut.description"
             helpContextId="rhino_launch_shortcut"
             icon="$nl$/icons/elcl16/rhino.gif"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.launch.shortcut"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.shortcut"
             label="%shortcut.label"
             modes="debug">
          <description
@@ -135,7 +135,7 @@
                mode="debug">
          </description>
          <configurationType
-               id="org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
+               id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.launch.config.type">
          </configurationType>
          <contextualLaunch>
             <enablement>
@@ -155,7 +155,7 @@
                         <with
                               variable="org.eclipse.core.runtime.Platform">
                            <test
-                                 args="org.eclipse.wst.jsdt.debug.rhino"
+                                 args="com.fhoster.org.eclipse.wst.jsdt.debug.rhino"
                                  property="org.eclipse.core.runtime.bundleState"
                                  value="ACTIVE">
                            </test>
@@ -170,15 +170,15 @@
    <extension
          point="org.eclipse.debug.core.sourcePathComputers">
       <sourcePathComputer
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.source.RhinoSourcePathComputer"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.source.path.computer">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.source.RhinoSourcePathComputer"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.source.path.computer">
       </sourcePathComputer>
    </extension>
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.RhinoPropertyTester"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.property.tester"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.RhinoPropertyTester"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.property.tester"
             namespace="rhino.ui"
             properties="isScript"
             type="org.eclipse.core.runtime.IAdaptable">
@@ -187,22 +187,22 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.wst.jsdt.debug.ui.debug.page"
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.ui.preferences.RhinoDebugPreferencePage"
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.debug.pref.page"
+            category="com.fhoster.org.eclipse.wst.jsdt.debug.ui.debug.page"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.ui.preferences.RhinoDebugPreferencePage"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.debug.pref.page"
             name="%rhinoDebugPrefPage.name">
          <keywordReference
-               id="org.eclipse.wst.jsdt.debug.rhino.ui.pref.page.keyword">
+               id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.pref.page.keyword">
          </keywordReference>
          <keywordReference
-               id="org.eclipse.wst.jsdt.debug.ui.debug.pref.page.keyword">
+               id="com.fhoster.org.eclipse.wst.jsdt.debug.ui.debug.pref.page.keyword">
          </keywordReference>
       </page>
    </extension>
    <extension
          point="org.eclipse.ui.keywords">
       <keyword
-            id="org.eclipse.wst.jsdt.debug.rhino.ui.pref.page.keyword"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.rhino.ui.pref.page.keyword"
             label="%rhinoDebugKeyword.label">
       </keyword>
    </extension>

@@ -12,23 +12,23 @@
 
 <plugin>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.jsdi.connect.RhinoAttachingConnector"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.jsdi.connect.RhinoAttachingConnector"
             id="rhino.attaching.connector">
       </connector>
    </extension>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.breakpointParticipants">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpointParticipants">
       <participant
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.breakpoints.RhinoBreakpointParticipant"
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.breakpoints.RhinoBreakpointParticipant"
             kind="*">
       </participant>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.wst.jsdt.debug.internal.rhino.RhinoPreferenceInitializer">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.RhinoPreferenceInitializer">
       </initializer>
    </extension>
 

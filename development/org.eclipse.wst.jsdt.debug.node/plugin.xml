@@ -2,24 +2,24 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.node.internal.launching.NodeLaunchConnector"
-            id="org.eclipse.wst.jsdt.debug.node.launching.connector">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.node.internal.launching.NodeLaunchConnector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.node.launching.connector">
       </connector>
    </extension>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.node.internal.launching.NodeAttachConnector"
-            id="org.eclipse.wst.jsdt.debug.node.attaching.connector">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.node.internal.launching.NodeAttachConnector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.node.attaching.connector">
       </connector>
    </extension>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.node.internal.launching.NodeListenConnector"
-            id="org.eclipse.wst.jsdt.debug.node.listening.connector">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.node.internal.launching.NodeListenConnector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.node.listening.connector">
       </connector>
    </extension>
 

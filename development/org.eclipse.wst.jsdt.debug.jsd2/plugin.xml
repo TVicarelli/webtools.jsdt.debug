@@ -2,10 +2,10 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.wst.jsdt.debug.core.launchingConnectors">
+         point="com.fhoster.org.eclipse.wst.jsdt.debug.core.launchingConnectors">
       <connector
-            class="org.eclipse.wst.jsdt.debug.internal.jsd2.connect.JSD2AttachingConnector"
-            id="org.eclipse.wst.jsdt.debug.jsd2.attaching.connector">
+            class="com.fhoster.org.eclipse.wst.jsdt.debug.internal.jsd2.connect.JSD2AttachingConnector"
+            id="com.fhoster.org.eclipse.wst.jsdt.debug.jsd2.attaching.connector">
       </connector>
    </extension>
 

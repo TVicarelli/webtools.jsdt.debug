@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.wst.jsdt.debug.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="com.fhoster.org.eclipse.wst.jsdt.debug.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.wst.jsdt.debug.core" id="breakpointParticipants" name="Breakpoint Participants"/>
+         <meta.schema plugin="com.fhoster.org.eclipse.wst.jsdt.debug.core" id="breakpointParticipants" name="Breakpoint Participants"/>
       </appinfo>
       <documentation>
          This extension point allows consumers to provide a breakpoint participant that will be consulted during the decision to suspend the kind of breakpoint the participant applies to.
@@ -57,10 +57,10 @@
          <attribute name="class" type="string" use="required">
             <annotation>
                <documentation>
-                  The class attribute is required and must implement &lt;code&gt;org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant&lt;/code&gt;
+                  The class attribute is required and must implement &lt;code&gt;com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant&lt;/code&gt;
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant"/>
+                  <meta.attribute kind="java" basedOn=":com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -102,9 +102,9 @@
       <documentation>
          The following example is the real life definition of the Mozilla Rhino participant for line breakpoints.
 &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.wst.jsdt.debug.core.breakpointParticipants&quot;&gt;
+&lt;extension point=&quot;com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpointParticipants&quot;&gt;
   &lt;participant
-     class=&quot;org.eclipse.wst.jsdt.debug.internal.rhino.breakpoints.RhinoBreakpointParticipant&quot;
+     class=&quot;com.fhoster.org.eclipse.wst.jsdt.debug.internal.rhino.breakpoints.RhinoBreakpointParticipant&quot;
      kind=&quot;*&quot;&gt;
   &lt;/participant&gt;
 &lt;/extension&gt;
@@ -117,7 +117,7 @@
          <meta.section type="apiinfo"/>
       </appinfo>
       <documentation>
-         The class attribute is required and must implement &lt;code&gt;org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant&lt;/code&gt;
+         The class attribute is required and must implement &lt;code&gt;com.fhoster.org.eclipse.wst.jsdt.debug.core.breakpoints.IJavaScriptBreakpointParticipant&lt;/code&gt;
       </documentation>
    </annotation>
 
